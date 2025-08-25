@@ -148,37 +148,51 @@ footer{
 
 }
 
-@media (max-width: 768px) {
-    nav ul {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: rgba(0, 0, 0, 0.679);
-      width: 200px;
-      border-radius: 6px;
-      padding: 10px;
 
-    }
 
-    nav ul li{
-        margin: 10px 0;
-
-    }
-    
-
+  /* desktop */
+  @media (min-width: 1025px) {
     .blogs {
         display: grid;
-        grid-template-columns:repeat(2,50%);
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
-        max-width: 1000px;
         margin: 0 auto;
         justify-content: center;
         align-items: center;
-      }
 
-    .menu-icon{
+
+    }
+  }
+
+  /* tablet */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.679);
+        width: 200px;
+        border-radius: 6px;
+        padding: 10px;
+  
+      }
+  
+      nav ul li{
+          margin: 10px 0;
+  
+      }
+      .menu-icon{
         display: block;
     }
 
@@ -191,35 +205,18 @@ footer{
         display: none;
     }
 
-
-
-
-    
-
-}
-
-@media (max-width: 480px) {
+  }
+  
+  /* mobile */
+  @media (max-width: 767px) {
     .blogs {
         display: grid;
-      grid-template-columns: repeat(1, 100%);
-      gap: 30px;
-      margin: 0 auto;
-      justify-content: center;
-      align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
     }
-  
-    .card3,
-    .card4,
-    .card5,
-    .card6 {
-      display: none;
-    }
-  
-    .blogs .card1,
-    .blogs .card2 {
-      font-size: 12px;
-    }
-
     nav ul {
         display: none;
         flex-direction: column;
@@ -245,6 +242,13 @@ footer{
     #menu:checked ~ ul{
         display: flex;
     }
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
+      display: none;
+    }
+
   }
   
 
